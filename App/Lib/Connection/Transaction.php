@@ -3,6 +3,7 @@
 namespace App\Lib\Connection;
 
 use App\Lib\Connection\Connect;
+use App\Lib\Utils\LOG\Logger;
 use PDO;
 use Exception;
 

@@ -7,7 +7,6 @@
  */
 
 const NAMESPACE_CONTROLLER = 'App\\Controllers\\';
-const NAMESPACE_ENTITY = "App\\Models\\Entity\\";
 
 /**
  *
@@ -33,25 +32,11 @@ const PAGE_ERROR_SERVER_MESSAGE = 'Erro com o servidor, estamos resolvendo isso 
  *
  */
 
-const EMAIL_HOST = 'smtp.office365.com';
-const EMAIL_USER = 'lucas.dev.teste@hotmail.com';
-const EMAIL_PASS = 'Lucas3765632514';
+const EMAIL_HOST = '';
+const EMAIL_USER = '';
+const EMAIL_PASS = '';
 const EMAIL_SECURE = 'TLS';
 const EMAIL_PORT = 587;
 const EMAIL_CHARSET = 'utf-8';
-const EMAIL_REMETENTE = 'lucas.dev.teste@hotmail.com';
-const EMAIL_REMETENTE_NAME = 'Lucas brabo';
-
-/**
- *
- * IMAGE CONFIG
- *
- */
-
-const IMG_EXTENSIONS = [
-    'jpg',
-    'jpeg',
-    'png',
-    'gif'
-];
-const IMG_MAX_SIZE = 999999999999999999;
+const EMAIL_REMETENTE = '';
+const EMAIL_REMETENTE_NAME = 'Neymar Jr';

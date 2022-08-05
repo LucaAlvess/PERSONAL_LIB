@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Lib\Controllers;
+namespace App\Controllers\Template;
 
 use App\Lib\Views\Render\View;
 
@@ -24,7 +24,9 @@ class TemplateController extends View
      */
     private static function getFooter(): string
     {
-        return View::render('template/footer');
+        return View::render('template/footer', [
+            'CRIADO' => 'Lucas - ' . date('Y')
+        ]);
     }
 
     /**

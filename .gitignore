@@ -1,3 +1,4 @@
 vendor/
 
 db_config.ini
+App/Lib/Config/config.php
