@@ -62,3 +62,14 @@
   font-style: italic;
   padding-left: 40px;
 }
+
+/*CONTACT ME SECTION*/
+
+.contact-me-section div{
+  text-align: center;
+  padding: 25px;
+}
+.contact-me-section div h2 {
+  font-weight: 400;
+  padding: 25px;
+}

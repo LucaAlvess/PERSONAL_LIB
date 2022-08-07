@@ -1,0 +1,26 @@
+footer .footer-contacts, .footer-copy {
+    text-align: center;
+}
+
+.footer-contacts h3 {
+    padding: 20px;
+    font-weight: 600;
+}
+
+.footer-contacts p a img{
+    width: 30px;
+    margin: 10px 0 10px 0;
+}
+.footer-contacts p a img:hover {
+    width: 35px;
+}
+
+.footer-contacts p a {
+    width: 30px;
+}
+
+.footer-copy {
+    background-color: black;
+    color: #f5f5f5;
+    padding: 20px;
+}
