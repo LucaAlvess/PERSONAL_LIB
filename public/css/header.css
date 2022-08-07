@@ -1,0 +1,53 @@
+:root {
+  --green-first-color: hsl(156, 60%, 50%);
+  --green-first-color-hover: hsl(156, 85%, 68%);
+}
+
+header nav div a img {
+  width: 100px;
+  transition: 0.3s ease-in-out;
+}
+
+header nav div a img:hover {
+  opacity: 0.5;
+}
+
+.container-header {
+  padding: 15px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* LINKS */
+
+.nav-links ul {
+  display: flex;
+  gap: 10px;
+}
+
+.nav-links ul li a{
+  color: black;
+  transition: .2s ease-in-out;
+  padding: 5px;
+}
+
+.nav-links ul li a:hover {
+  color: #00000052;
+  border-bottom: 1px solid var(--green-first-color);
+}
+
+.register-button {
+  background-color: var(--green-first-color);
+  padding: 10px 20px !important;
+  margin-left: 5px;
+  border-radius: 40px;
+  color: #f5f5f5 !important;
+  font-weight: 400;
+
+  transition: 0.2s ease-in-out;
+}
+
+.register-button:hover {
+  background-color: var(--green-first-color-hover);
+}

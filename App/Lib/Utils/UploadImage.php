@@ -174,6 +174,10 @@ class UploadImage
         return $this->imgName;
     }
 
+    /**
+     * Método responsável por retornar a extensão do arquivo de imagem
+     * @return string
+     */
     public function getImgExtension(): string
     {
         return $this->imgExtension;
