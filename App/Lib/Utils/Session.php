@@ -2,6 +2,8 @@
 
 namespace App\Lib\Utils;
 
+use JetBrains\PhpStorm\NoReturn;
+
 /**
  * Classe para gerenciar Sessões
  */
@@ -71,5 +73,35 @@ class Session
     public static function formExist(): string
     {
         return $_SESSION['form'] ?? '';
+    }
+
+    /**
+     * Método responsável por armazenar o nome do usuario na sessão
+     * @param string $userName
+     * @return void
+     */
+    public function recordUserNameSession(string $userName): void
+    {
+        $_SESSION['username'] = $userName;
+    }
+
+    /**
+     * Método responsável por retornar o nome do usuario armazenado na sessão
+     * @param string $userName
+     * @return string
+     */
+    public function returnUserNameSession(string $userName): string
+    {
+        return $_SESSION['username'] ?? '';
+    }
+
+    /**
+     *Método responsável por iniciar a sessão e setar o id da sessão
+     * @return void
+     */
+    public function initSession(): void
+    {
+        session_start();
+        $_SESSION['id'] = session_id();
     }
 }
