@@ -1,4 +1,5 @@
 vendor/
+App/testes/
 
 db_config.ini
 App/Lib/Config/config.php

@@ -55,3 +55,11 @@ const IMG_EXTENSIONS = [
     'gif'
 ];
 const IMG_MAX_SIZE = 999999999999999999;
+
+/**
+ *
+ * DATES
+ *
+ */
+
+define("DATE_EXPIRATION_COOKIE", time() + 60 * 60 * 24 * 30);
