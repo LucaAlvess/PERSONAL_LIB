@@ -7,6 +7,9 @@ namespace App\Lib\Utils;
  */
 class Session
 {
+
+    private static string $sessionParamName = 'user';
+
     /**
      * Método responsável por gravar uma mensagem na variável de sessão
      * @param string $message
@@ -75,22 +78,40 @@ class Session
 
     /**
      * Método responsável por armazenar o nome do usuario na sessão
-     * @param string $paramSession
-     * @param mixed $valueSession
+     * @param string $valueSession
+     * @param string|null $paramSession
      * @return void
      */
-    public static function recordSessionParam(string $paramSession, mixed $valueSession): void
+    public static function createSession(string $valueSession, string|null $paramSession = null): void
     {
-        $_SESSION[$paramSession] = $valueSession;
+        if ($paramSession) {
+            self::$sessionParamName = $paramSession;
+        }
+
+        $_SESSION[self::$sessionParamName] = $valueSession;
     }
 
     /**
-     * Método responsável por retornar o nome do usuario armazenado na sessão
-     * @param string $sessionParam
-     * @return string|null
+     * Método responsável por retornar o valor de um índice armazenado na sessão
+     * @return bool|string
      */
-    public static function returnSessionParam(string $sessionParam): ?string
+    public static function returnSessionParam(): bool|string
     {
-        return $_SESSION[$sessionParam] ?? null;
+        if(isset($_SESSION[self::$sessionParamName])) {
+            return $_SESSION[self::$sessionParamName];
+        }
+
+        return false;
+    }
+
+    /**
+     * Método responsável por checar a existência do parâmetro na sessão
+     * @return bool
+     */
+    public static function checkSession(): bool
+    {
+        if(isset($_SESSION[self::$sessionParamName])) return true;
+
+        return false;
     }
 }
