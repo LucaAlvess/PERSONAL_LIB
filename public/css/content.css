@@ -44,6 +44,11 @@
   position: relative;
 }
 
+.container-search-form form div small {
+  color: var(--text-whitesmoke);
+  font-style: italic;
+}
+
 .container-search-form .submit-input {
   width: 30px;
   height: 100%;

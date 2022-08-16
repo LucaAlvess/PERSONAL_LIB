@@ -1,12 +1,16 @@
 <?php
 
-session_start();
 date_default_timezone_set('America/Sao_Paulo');
+session_start();
 
 require_once __DIR__ . '/vendor/autoload.php';
 
 use App\Lib\Controllers\Page;
 use App\Lib\Utils\Error;
+use App\Lib\Utils\Session;
+use App\Lib\Utils\Cookie;
+
+if(Cookie::checkIfCookieExist()) Session::createSession(Cookie::returnValueCookie());
 
 try {
     if (isset($_GET['url'])) {
